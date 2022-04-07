@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background: #fff;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: #fff;
+    font-family: 'Comfortaa';
+    font-weight: 400;
+  }
+  
+  .content {
+    height: 200vh;
+    background-color: #FFF;
+    background-blend-mode: multiply;
+    background-size: cover;
+  }
