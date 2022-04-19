@@ -22,7 +22,7 @@
     background-size: cover;
   }
 
-/* ------------------------------------------------ Start Navigation -------------------------------------------- */
+/* ------------------------------------------------ Start Navigation -------------------------------------------- */  
 
   nav a::before {
     content:"";
@@ -45,8 +45,8 @@
 
   header {
     background: var(--background);
-    background-color: #314465;
-    text-align: left;
+    background-color: #1A545D;
+    text-align: center;
     position: fixed;
     width: 100%;
     height: 100px;
@@ -64,9 +64,35 @@
     margin-left: 1em;
     height: 100%;
     display: flex;
-    align-items: left;
+    align-items: center;
   }
-
+  
+  /* hamburger menu styles */
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content:"";
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 8px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 8px;
+  }
+  
   nav {
     position: absolute;
     text-align: left;
@@ -112,7 +138,7 @@
     transition: opacity 250ms ease-in-out 250ms;
   }
 
-/* ------------------------------------------------ End Navigation -------------------------------------------- */
+/*---------------------------------------------------- End Navigation ------------------------------------------------*/ 
 
   .hero {
     height: 100vh;
@@ -123,8 +149,13 @@
   }
 
   .hero-logo {
-    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .body-text {
@@ -133,9 +164,53 @@
   }
 
   .ASAN-text {
-    font: 15px;
     color: #fff;
     margin-left: 50px;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 100px;
+    text-align: left;
+  }
+
+  .autism-text {
+    color: #6E6E6E;
+    margin-left: 50px;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 100px;
+    text-align: left;
+  }
+
+  .autism-text-small {
+    color: #6E6E6E;
+    margin-left: 50px;
+    font-size: 13px;
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  .donate-text {
+    color: #6E6E6E;
+    margin-left: 50px;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 100px;
+    text-align: center;
+  }
+
+  .campaign-text {
+    color: #fff;
+    font-size: 15px;
+    margin-left: 205px;
+    margin-right: 205px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .row {
@@ -153,6 +228,7 @@
     align-items: center;
     background-image: url(Images/Section_bg.png);
     background-size: cover;
+    padding-left: 80px;
   }
 
   .campaign-row {
@@ -163,4 +239,83 @@
     width: 70%;
     background-image: url(Images/Section_bg_blue.png);
     background-size: cover;
+  }
+
+  .section {
+    text-align: center;
+    padding: 50px 80px 70px;
+  }
+  
+  .section-red {
+    background: #F16B6C;
+  }
+
+  .section-blue {
+    background: #59C4BF;
+  }
+
+  h2 {
+    font-family: 'comfortaa';
+    color: #fff;
+    font-size: 35px;
+  }
+
+  h3 {
+    font-family: 'comfortaa';
+    color: #fff;
+    font-size: 25px;
+  }
+
+  h4 {
+    font-family: 'comfortaa';
+    color: #F16B6C;
+    font-size: 18px;
+  }
+
+  .h2-red {
+    font-family: 'comfortaa';
+    color: #F16B6C;
+    font-size: 35px;
+  }
+
+  .h3-red {
+    font-family: 'comfortaa';
+    color: #F16B6C;
+    font-size: 25px;
+  }
+
+  .columns_2 {
+    margin: 20px;
+  }
+
+  .columns_3 {
+    margin: 0 20px;
+  }
+
+  button {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #5F57A4;
+    color: white;
+    font-family: comfortaa;
+   }
+ 
+   button:hover {
+    background: #7ad09c;
+    color: white;
+   }
+
+   .footer {
+    height: 15vh;
+    background-color: #1A545D;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+   }
+
+   .footer-text {
+    font-family: 'comfortaa';
+    color: #FFF;
   }
