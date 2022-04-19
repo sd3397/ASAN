@@ -110,6 +110,12 @@
     padding: 0;
     list-style: none;
   }
+
+  nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   
   nav li {
     margin-bottom: 1em;
@@ -136,6 +142,26 @@
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: ASAN 0;
+    text-align: left;
+    font-size: 15px;
+    color: #6E6E6E;
+  }
+
+  ol li {
+    counter-increment: ASAN;
+    padding: 0 0 1em .5em;
+    font-family: comfortaa;
+  }
+
+  ol li::marker {
+    content: counter(ASAN) ".";
+    color: #F16B6C;
+    font-weight: bold; 
   }
 
 /*---------------------------------------------------- End Navigation ------------------------------------------------*/ 
@@ -300,6 +326,11 @@
     background-color: #5F57A4;
     color: white;
     font-family: comfortaa;
+   }
+
+   button a {
+     text-decoration: none;
+     color: white;
    }
  
    button:hover {
