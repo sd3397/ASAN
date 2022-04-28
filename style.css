@@ -66,7 +66,7 @@
     display: flex;
     align-items: center;
   }
-  
+
   /* hamburger menu styles */
   .nav-toggle-label span,
   .nav-toggle-label span::before,
@@ -142,7 +142,7 @@
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
-  }
+  } 
 
   ol {
     list-style: none;
@@ -173,6 +173,38 @@
     display: flex;
     justify-content: center;
   }
+/*-------------------------------------- Hero Test CSS --------------------------------------*/
+  /* external css: flickity.css */
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  img {
+    padding: 1rem;
+  }
+  
+  .carousel-cell {
+    width: 100%; /* full width */
+    height: 100vh; /* height of carousel */
+    margin-right: 10px;
+  }
+
+  .carousel-cell img {
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .carousel-cell {
+      width: 50%;
+    }
+  }
+
+/*-------------------------------------- End Hero Test CSS --------------------------------------*/
 
   .hero-logo {
     display: block;
@@ -274,10 +306,48 @@
   
   .section-red {
     background: #F16B6C;
+    margin-top: 0;
   }
+
+ .section-red-box-1 {
+  background: rgb(241,107,108);
+  background: linear-gradient(354deg, rgba(241,107,108,1) 0%, rgba(241,107,108,1) 39%, rgba(255,255,255,1) 39%);
+  height: 405px;
+}
+
+.section-red-box-2 {
+  background: rgb(255,255,255);
+  background: linear-gradient(354deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 65%, rgba(241,107,108,1) 65%);
+  height: 405px;
+}
 
   .section-blue {
     background: #59C4BF;
+    margin-top: 0;
+  }
+
+  .section-blue-box-1 {
+    background: rgb(89,196,191);
+    background: linear-gradient(354deg, rgba(89,196,191,1) 0%, rgba(89,196,191,1) 39%, rgba(255,255,255,1) 39%);
+    height: 405px;
+  }
+  
+  .section-blue-box-2 {
+    background: rgb(89,196,191);
+    background: linear-gradient(174deg, rgba(89,196,191,1) 0%, rgba(89,196,191,1) 50%, rgba(255,255,255,1) 50%);
+    height: 405px;
+  }
+
+  .section-blue-box-3 {
+    background: rgb(89,196,191);
+    background: linear-gradient(2deg, rgba(89,196,191,1) 0%, rgba(89,196,191,1) 16%, rgba(255,255,255,1) 16%);
+    height: 300px;
+  }
+
+  .section-blue-box-4 {
+    background: rgb(89,196,191);
+    background: linear-gradient(182deg, rgba(89,196,191,1) 0%, rgba(89,196,191,1) 16%, rgba(255,255,255,1) 16%);
+    height: 300px;
   }
 
   h2 {
@@ -286,10 +356,15 @@
     font-size: 35px;
   }
 
+  h2 .about-asan {
+    margin-top: 0;
+  }
+
   h3 {
     font-family: 'comfortaa';
     color: #fff;
     font-size: 25px;
+    margin-top: 0;
   }
 
   h4 {
@@ -308,6 +383,7 @@
     font-family: 'comfortaa';
     color: #F16B6C;
     font-size: 25px;
+    text-align: center;
   }
 
   .columns_2 {
