@@ -20,6 +20,7 @@
     background-color: #FFF;
     background-blend-mode: multiply;
     background-size: cover;
+    position: absolute;
   }
 
 /* ------------------------------------------------ Start Navigation -------------------------------------------- */  
@@ -174,35 +175,115 @@
     justify-content: center;
   }
 /*-------------------------------------- Hero Test CSS --------------------------------------*/
-  /* external css: flickity.css */
 
-  html {
-    box-sizing: border-box;
-  }
-  
-  *:before, *:after {
-    box-sizing: border-box;
-  }
-  
-  img {
-    padding: 1rem;
-  }
-  
-  .carousel-cell {
-    width: 100%; /* full width */
-    height: 100vh; /* height of carousel */
-    margin-right: 10px;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .carousel-cell img {
-    width: 100%;
-  }
-  
-  @media (max-width: 600px) {
-    .carousel-cell {
-      width: 50%;
-    }
-  }
+body {
+  font-family: 'comfortaa', sans-serif;
+  background: white;
+  color: white;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+/* text of the slide */
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: 0px;
+  width: 600px;
+  opacity: 0px;
+  background: rgba(255,255,255,.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background: rgba(255,255,255,.8);
+  color: #333;
+}
+
+/* Background Images */
+.slide:first-child {
+  background-image: url(Images/Hero-image.jpg);
+  background-size: cover;
+}
+
+.slide:nth-child(2) {
+  background-image: url(Images/Hero-image2.png);
+  background-size: cover;
+}
+
+.slide:nth-child(3) {
+  background-image: url(Images/Hero-image3.jpg);
+  background-size: cover;
+}
+
+.slide:nth-child(4) {
+  background-image: url(Images/Hero-image4.jpg);
+  background-size: cover;
+}
+
+.slide:nth-child(5) {
+  background-image: url(Images/Hero-image5.jpg);
+  background-size: cover;
+}
 
 /*-------------------------------------- End Hero Test CSS --------------------------------------*/
 
@@ -241,6 +322,19 @@
     padding-left: 70px;
     padding-right: 100px;
     text-align: left;
+  }
+
+  .autism-text-right {
+    color: #6E6E6E;
+    font-size: 15px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 100px;
+    text-align: left;
+  }
+
+  .list {
+    padding-top: 70px;
   }
 
   .autism-text-small {
@@ -396,6 +490,8 @@
 
   button {
     padding: 10px 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     border-radius: 25px;
     border: none;
     cursor: pointer;
@@ -414,15 +510,32 @@
     color: white;
    }
 
+   /*
    .footer {
-    height: 15vh;
+    height: 100px;
     background-color: #1A545D;
     background-size: cover;
     display: flex;
     justify-content: center;
    }
+   */
 
-   .footer-text {
-    font-family: 'comfortaa';
-    color: #FFF;
+   footer {
+    text-align: center;
+    padding: 6px;
+    background-color: #1A545D;
+    color: white;
   }
+
+   .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-text {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}

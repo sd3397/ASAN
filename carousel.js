@@ -1,22 +1,48 @@
-/*
-$('.main-carousel').flickity({
-    // options
-    cellAlign: 'left',
-    contain: true,
-    wrapAround: true,
-    autoPlay: 1000,
-  });
-  */
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const auto = false; //auto scroll
+const intervalTime = 5000;
+let slideInterval;
 
-  var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity( elem, {
-  // options
-  cellAlign: 'left',
-  contain: true
+const nextSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for next slide
+    if (current.nextElementSibling) {
+        // Add current to next siblling
+        current.nextElementSibling.classList.add('current');
+    } else {
+        // Add current to start
+        slides[0].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+}
+
+const prevSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for prev slide
+    if (current.previousElementSibling) {
+        // Add current to prev siblling
+        current.previousElementSibling.classList.add('current');
+    } else {
+        // Add current to last
+        slides[slides.length - 1].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+}
+
+// Button events
+
+next.addEventListener('click', e => {
+    nextSlide();
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity( '.main-carousel', {
-  // options
+prev.addEventListener('click', e => {
+    prevSlide();
 });

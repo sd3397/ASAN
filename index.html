@@ -36,17 +36,52 @@
 
     <!------------------------------------ Code for image carosel test ------------------------------------>
 
-    <div class="main-carousel">
-        <div class="carousel-cell"><img src="Images/Hero-image.jpg" alt="research"><p>Genetic Research & Autism</p></div>
+    <div class="slider">
+  
+        <div class="slide current">
+            <div class="content">
+              <h1> Genetic Research & Autism </h1>
+              <p>As genetic research continues 
+                to develop, autistic people 
+                must have our say in how it 
+                should be used, and not used.</p>
+            </div>
+        </div>
         
-        <div class="carousel-cell"><img src="Images/Hero-image.jpg" alt="Placeholder"></div>
+        <div class="slide">
+          <div class="content">
+            <h1>Health Equity and Accountability Act</h1>
+            <p>Body text</p>
+          </div>
+        </div> 
         
-        <div class="carousel-cell"><img src="Images/Hero-image.jpg" alt="Placeholder"></div>
+        <div class="slide">
+          <div class="content">
+            <h1>Public Charge Grounds of Inadmissibility</h1>
+            <p>Body text</p>
+          </div>
+        </div> 
         
-        <div class="carousel-cell"><img src="Images/Hero-image.jpg" alt="Placeholder"></div>
+        <div class="slide">
+          <div class="content">
+            <h1 class="">Make your voice heard for HCBS now!</h1>
+            <p>Body text</p>
+          </div>
+        </div> 
         
-        <div class="carousel-cell"><img src="Images/Hero-image.jpg" alt="Placeholder"></div>
+        <div class="slide">
+          <div class="content">
+            <h1>Comments for April 13-14th IACC Meeting</h1>
+            <p>Body text</p>
+          </div>
+        </div> 
+          
       </div>
+      
+      <div class="buttons">
+              <button id="prev"><p>&lt;</p></button>
+              <button id="next"><p>&gt;</p></button>
+          </div>
 
     <!-------------------------------------- End image carosel test --------------------------------------->
 
@@ -95,14 +130,14 @@
     
     <div class="columns_2">
 
-        <ol type = "1">
+        <ol type = "1" class="list">
             <li>We think differently</li>
             <li>How we process our senses is different</li>
             <li>We talk and act differently</li>
             <li>We interact with other people differently</li>
         </ol>
 
-      <p class="autism-text">
+      <p class="autism-text-right">
         ASAN is a non profit organization that aims to help with 
         the self advocacy for adult autistic individuals. Unlike other Autism organizations, 
         ASAN focuses on rights for autistic people instead of research into the cause, 
@@ -263,11 +298,10 @@
 </section>
 
 <footer>
-    <div class="footer columns_2">
+    <div class="footer-content">
     <p class="footer-text">@Copyright Autism Self Advocacy Network 2022</p>
-    </div>
-
-    <div class="footer columns_2">
+</div>
+</div class="footer-content">
         <img src="Images/facebook.png" style="margin: 0px 15px 15px 15px;"
             width="25px"
             height="45px">
@@ -277,9 +311,11 @@
         <img src="Images/instagram.png" style="margin: 0px 15px 15px 15px;"
             width="45"
             height="45">
-    </div>
+        </div>
 </footer> 
+
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script src="carousel.js"></script>
+
 </body>
