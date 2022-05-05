@@ -16,11 +16,13 @@
   }
   
   .content {
-    height: 200vh;
-    background-color: #FFF;
+    height: 200px;
+    background-color: rgba(26, 84, 93, .7);
     background-blend-mode: multiply;
     background-size: cover;
     position: absolute;
+    color: #fff;
+
   }
 
 /* ------------------------------------------------ Start Navigation -------------------------------------------- */  
@@ -29,7 +31,7 @@
     content:"";
     display: block;
     height: 5px;
-    background: #FF007F;
+    background: #F16B6C;
     position: absolute;
     top: -.75em;
     left: 0;
@@ -37,7 +39,7 @@
     
     transform: scale(0,1);
     transform-origin: left;
-    transition: transform ease-in-out 250ms;
+    transition: transform ease-in-out 650ms;
   }
   
   nav a:hover::before {
@@ -124,7 +126,7 @@
   }
   
   nav a {
-    color: #FF98CA;
+    color: #F16B6C;
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -133,7 +135,7 @@
   }
   
   nav a:hover {
-    color: #FFD5E3;
+    color: #59C4BF;
   }
   
   .nav-toggle:checked ~ nav {
@@ -214,21 +216,28 @@ body {
 .slide .content {
   position: absolute;
   bottom: 70px;
-  left: 0px;
+  left: -600px;
   width: 600px;
   opacity: 0px;
-  background: rgba(255,255,255,.8);
-  color: #333;
   padding: 35px;
 }
 
 .slide .content h1 {
   margin-bottom: 10px;
+  font-family: 'comfortaa';
+  font-size: 35px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-family: 'comfortaa';
+  font-size: 35px;
+  align-content: center;
 }
 
 .slide.current .content {
   opacity: 1;
-  transform: translateX(600px);
+  transform: translateX(1300px);
   transition: all 0.7s ease-in-out 0.3s;
 }
 
@@ -286,6 +295,12 @@ body {
 }
 
 /*-------------------------------------- End Hero Test CSS --------------------------------------*/
+
+  .logo {
+    display: block;
+    margin-top: 10px;
+    justify-content: center;
+  }
 
   .hero-logo {
     display: block;
